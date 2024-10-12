@@ -5,9 +5,11 @@
         while (true)
         {
             Console.WriteLine("Oyunumuza Hoşgeldiniz !!\n");
+            Console.WriteLine("0: Çıkış Yapmak İçin\n");
             Console.WriteLine("1: Rastgele Sayı Bulma Oyunu");
             Console.WriteLine("2: Hesap Makinesi");
             Console.WriteLine("3: Ortalama Hesaplama\n");
+
             Console.WriteLine("Seçmek istediğiniz oyunun numarasını giriniz.");
 
             int y = Convert.ToInt32(Console.ReadLine());
@@ -142,6 +144,11 @@
                 {
                     Console.WriteLine($"Ortalamanız : {ortalama}. Harf Notunuz: AA");
                 }
+            }
+
+            if (y == 0)
+            {
+                break;
             }
         }
     }
