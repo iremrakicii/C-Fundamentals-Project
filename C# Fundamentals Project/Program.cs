@@ -93,10 +93,10 @@
                 Console.WriteLine("Lütfen birinci ders notunuzu  giriniz.");
                 int not1 = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("Lütfen birinci ders notunuzu  giriniz.");
+                Console.WriteLine("Lütfen ikinci ders notunuzu  giriniz.");
                 int not2 = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("Lütfen birinci ders notunuzu  giriniz.");
+                Console.WriteLine("Lütfen üçüncü ders notunuzu  giriniz.");
                 int not3 = Convert.ToInt32(Console.ReadLine());
 
                 double ortalama = ((not1 + not2 + not3) / 3);
