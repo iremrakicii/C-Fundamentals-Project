@@ -36,20 +36,33 @@
                     {
                         Console.WriteLine("Tahmininiz büyük kalmıştır.");
                     }
+
+
                     else
                     {
                         Console.WriteLine($"Tahmniniz doğru!. Tebrikler!. Rastgele sayınız : {rastgeleSayi}");
                         y = 0;
                     }
 
+
                     tahminHakki++;
 
                     Console.WriteLine($"Kalan tahmin hakkınız:{5 - tahminHakki} \n");
+
+                    if (tahminHakki >= 5)
+                    {
+                        Console.WriteLine("Tahmin hakkınız kalmamıştır. Lütfen tekrar deneyiniz.");
+                        continue;
+                    }
+
                 }
+
+
             }
 
             if (y == 2)
             {
+            soru2:
                 Console.WriteLine("Lütfen bir tamsayı değeri giriniz.");
                 int sayi1 = Convert.ToInt32(Console.ReadLine());
 
@@ -60,6 +73,7 @@
                 Console.WriteLine("Toplama için +,\r\n\r\n Çıkarma için -,\r\n\r\n Çarpma için *,\r\n\r\n Bölme için / kullanınız.");
 
                 string islem = Console.ReadLine();
+
 
                 switch (islem)
                 {
@@ -76,7 +90,7 @@
                         if (sayi2 == 0)
                         {
                             Console.WriteLine("Hatalı işlem yaptınız.");
-                            break;
+                            goto soru2;
                         }
                         Console.WriteLine($"Bölme işlemi: {sayi1 / sayi2}");
                         break;
@@ -84,12 +98,14 @@
                         Console.WriteLine("Hatalı Giriş Yaptınız.");
                         break;
 
+
                 }
 
             }
 
             if (y == 3)
             {
+
                 Console.WriteLine("Lütfen birinci ders notunuzu  giriniz.");
                 int not1 = Convert.ToInt32(Console.ReadLine());
 
@@ -99,12 +115,14 @@
                 Console.WriteLine("Lütfen üçüncü ders notunuzu  giriniz.");
                 int not3 = Convert.ToInt32(Console.ReadLine());
 
-                double ortalama = ((not1 + not2 + not3) / 3);
+                double ortalama = ((not1 + not2 + not3) / 3.0);
 
-                if (!(0 < not1 && not1 < 100) || !(0 < not2 && not2 < 100) || !(0 < not3 && not3 < 100))
+                if (!(0 <= not1 && not1 <= 100) || !(0 <= not2 && not2 <= 100) || !(0 <= not3 && not3 <= 100))
                 {
                     Console.WriteLine("Geçersiz bir not girişi yaptınız.");
                     y = 0;
+
+
                 }
 
                 if (ortalama >= 90 && ortalama <= 100)
