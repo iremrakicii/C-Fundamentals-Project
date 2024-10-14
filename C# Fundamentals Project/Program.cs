@@ -89,7 +89,7 @@
                     case "/":
                         if (sayi2 == 0)
                         {
-                            Console.WriteLine("Hatalı işlem yaptınız.");
+                            Console.WriteLine("Hatalı işlem yaptınız. Lütfen tekrar deneyiniz.");
                             goto soru2;
                         }
                         Console.WriteLine($"Bölme işlemi: {sayi1 / sayi2}");
@@ -105,7 +105,7 @@
 
             if (y == 3)
             {
-
+                soru3:
                 Console.WriteLine("Lütfen birinci ders notunuzu  giriniz.");
                 int not1 = Convert.ToInt32(Console.ReadLine());
 
@@ -119,10 +119,9 @@
 
                 if (!(0 <= not1 && not1 <= 100) || !(0 <= not2 && not2 <= 100) || !(0 <= not3 && not3 <= 100))
                 {
-                    Console.WriteLine("Geçersiz bir not girişi yaptınız.");
+                    Console.WriteLine("Geçersiz bir not girişi yaptınız. Lütfen tekrar deneyiniz.");
                     y = 0;
-
-
+                    goto soru3;
                 }
 
                 if (ortalama >= 90 && ortalama <= 100)
