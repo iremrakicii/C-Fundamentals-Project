@@ -99,9 +99,9 @@
                 Console.WriteLine("Lütfen üçüncü ders notunuzu  giriniz.");
                 int not3 = Convert.ToInt32(Console.ReadLine());
 
-                double ortalama = ((not1 + not2 + not3) / 3);
+                double ortalama = ((not1 + not2 + not3) / 3.0);
 
-                if (!(0 < not1 && not1 < 100) || !(0 < not2 && not2 < 100) || !(0 < not3 && not3 < 100))
+                if (!(0 <= not1 && not1 <= 100) || !(0 <= not2 && not2 <= 100) || !(0 <= not3 && not3 <= 100))
                 {
                     Console.WriteLine("Geçersiz bir not girişi yaptınız.");
                     y = 0;
